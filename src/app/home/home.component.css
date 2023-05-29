@@ -1,0 +1,135 @@
+.toolbar {
+  background-color: #fff;
+  height: 50px;
+  border-bottom: 1px solid #ccc;
+}
+
+.main {
+  background-color: #ffffff;
+  padding: 20px;
+}
+
+.body {
+  background-color: #ffffff;
+}
+
+.header {
+  text-align: center;
+  font: 200 30px/32px "gt-eesti", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin: 10px;
+}
+
+.header_low {
+  text-align: center;
+  font: 200 20px/22px "gt-eesti", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin: 10px;
+}
+
+.container {
+  max-width: 500px;
+  margin: 20px auto;
+  background-color: #ffffff;
+  padding: 10px; /* Зменшено відступи */
+  box-sizing: border-box; /* Додано, щоб враховувати рамку в розмір контейнера */
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.col-md-12 {
+  width: 100%;
+}
+
+.col-md-6 {
+  background-color: #ffffff;
+  margin: 0 auto;
+  padding: 10px; /* Зменшено відступи */
+  box-sizing: border-box; /* Додано, щоб враховувати рамку в розмір контейнера */
+}
+
+.btn {
+  margin-top: 10px;
+}
+
+.btn-primary {
+  background-color: #000;
+  color: #fff;
+  font-weight: bold;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-secondary {
+  background-color: #ccc;
+  color: #000;
+  font-weight: bold;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+p {
+  font-size: 1em;
+}
+
+input {
+  align-items: center;
+  box-sizing: border-box;
+  color: hsla(189, 89%, 17%, 1);
+  background-color: hsla(0, 0%, 93%, 1);
+  border-radius: 16px;
+  box-shadow: 0 0 0 3px transparent;
+  width: 100%;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+button {
+  border-radius: 16px 16px 16px 16px;
+  background-color: hsla(197, 100%, 48%, 1);
+  font-weight: bold;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.row-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+table {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse; /* Додано, щоб злити рамки клітинок таблиці */
+}
+
+table th,
+table td {
+  text-align: center;
+  padding: 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  background-color: hsla(197, 100%, 48%, 0.3);
+  border: 1px solid #7e7e7e; /* Додано рамку */
+  border-radius: 8px; /* Додано радіус на кути */
+}
+
+.join-button{
+  background-color: hsla(197, 75%, 48%, 1);
+  border-radius: 16px 16px 16px 16px;
+}

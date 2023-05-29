@@ -1,0 +1,70 @@
+/* admin-page.component.css */
+.admin-page {
+  display: flex;
+  flex-direction: row;
+}
+
+.header-text{
+  text-align: center;
+  background-color: hsl(198, 88%, 68%) !important;
+}
+
+.left-panel,
+.right-panel {
+  flex: 1;
+  padding: 20px;
+  box-sizing: border-box;
+  margin-top: 20px;
+}
+
+.left-panel {
+  flex: 1;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #f2f2f2;
+  margin-right: 20px; /* Add margin between left and right panels */
+}
+
+.right-panel {
+  flex: 1;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #ffffff;
+}
+
+table {
+  width: 100%;
+  table-layout: fixed;
+}
+
+table th,
+table td {
+  text-align: center;
+  padding: 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.admin-page :not(button) {
+  align-items: center;
+  box-sizing: border-box;
+  color: hsla(189, 89%, 17%, 1);
+  background-color: hsla(0, 0%, 93%, 1);
+  border-radius: 16px;
+  box-shadow: 0 0 0 3px transparent;
+  width: 100%;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+
+button {
+  border-radius: 6px 6px 6px 6px;
+  background-color: hsla(197, 100%, 48%, 1);
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  margin-left: 2px;
+  margin-right: 2px;
+}

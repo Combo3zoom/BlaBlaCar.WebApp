@@ -1,0 +1,25 @@
+<form>
+  <div class="login-container">
+    <div class="login-content">
+      <mat-toolbar class="login-toolbar" color="primary">BlaBlaCar</mat-toolbar>
+      <mat-card>
+        <form [formGroup]="loginForm" #formDirective="ngForm" (ngSubmit)="onSubmit(loginForm, formDirective)"
+              style="display: flex; flex-direction: column; align-items: center;">
+          <mat-form-field>
+            <mat-icon matPrefix>person_outline</mat-icon>
+            <input autofocus type="text" matInput placeholder="name" formControlName="name">
+          </mat-form-field>
+
+          <mat-form-field>
+            <mat-icon matPrefix>lock_outline</mat-icon>
+            <input type="password" autocomplete="false" matInput placeholder="Password" formControlName="password">
+          </mat-form-field>
+
+          <button type="submit" mat-raised-button color="primary">LOGIN</button>
+        </form>
+        <br>
+        <span style="text-align: center"> If You don't have a account yet please <a routerLink ='/register'>REGISTER HERE</a></span>
+      </mat-card>
+    </div>
+  </div>
+</form>

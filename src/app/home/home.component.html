@@ -1,0 +1,79 @@
+<body>
+<div class="main">
+  <div class="container">
+    <h1 class="header">BlaBlaCar</h1>
+    <p>Maecenas quis eleifend metus, eu auctor libero. Cras porttitor ultrices erat, ac dictum libero tincidunt feugiat.
+      Aenean consectetur ipsum eget massa sagittis, quis dictum dui dictum. Donec ac elit vel dolor semper viverra.
+      Nulla leo tortor, cursus sed eros in, tincidunt sagittis nulla. Quisque eu elit diam.</p>
+  </div>
+
+  <form [formGroup]="findTripForm" (ngSubmit)="foundTrips()">
+  <div class="row" style="display: block;">
+    <div class="col-md-6">
+      <h2 class="header_low">Знайти подорож</h2>
+      <div class="row-container">
+        <input type="text" placeholder="Введіть стартову точку" formControlName="findStartRoute" [formGroup]="findTripForm">
+        <input type="text" placeholder="Введіть пункт призначення" formControlName="findEndRoute" [formGroup]="findTripForm">
+        <input type="date" placeholder="Час відбуття" formControlName="findDepartureAt" [formGroup]="findTripForm">
+        <button class="search" type="submit" [disabled]="findTripForm.invalid">Пошук</button>
+      </div>
+    </div>
+  </div>
+   </form>
+
+  <div class="row" style="background-color: rgb(237, 237, 237);">
+    <div class="col-md-6">
+      <ul style="list-style: none; padding-left: 0;">
+        <li *ngFor="let trip of trips.slice(0, trips.length / 2)" style="margin: 5px">
+          {{ trip.route.startRoute }} -> {{ trip.route.endRoute }}
+          {{ trip.departureAt | date }}
+          <button class="join-button" (click)="joinTrip(trip)">Join</button>
+        </li>
+      </ul>
+    </div>
+    <div class="col-md-6">
+      <ul style="list-style: none; padding-left: 0;">
+        <li *ngFor="let trip of trips.slice(trips.length / 2)" style="margin: 5px">
+          {{ trip.route.startRoute }} -> {{ trip.route.endRoute }}
+          {{ trip.departureAt | date }}
+          <button class="join-button" (click)="joinTrip(trip)">Join</button>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+    <br>
+
+  <form [formGroup]="shareTripForm" (ngSubmit)="foundTrips()">
+    <div class="col-md-6">
+      <h2 class="header_low">Створити поїздку</h2>
+      <div class="row-container">
+        <input type="text" placeholder="Введіть стартову точку" formControlName="shareStartRoute" [formGroup]="shareTripForm">
+        <input type="text" placeholder="Введіть пункт призначення" formControlName="shareEndRoute" [formGroup]="shareTripForm">
+        <input type="date" placeholder="Час відбуття" formControlName="shareDepartureAt" [formGroup]="shareTripForm">
+        <button class="search" type="submit" (click)="shareTrip()" [disabled]="shareTripForm.invalid">Пошук</button>
+      </div>
+    </div>
+  </form>
+
+
+  <div class="container">
+    <table>
+      <thead>
+      <tr>
+        <th>Ім'я</th>
+        <th>Акаунт створений</th>
+      </tr>
+      </thead>
+      <tbody>
+      <ng-container *ngFor="let user of users">
+        <tr *ngIf="!isUserVerified(user)">
+          <td>{{ user.name }}</td>
+          <td>{{ user.userCreatedAt | date }}</td>
+        </tr>
+      </ng-container>
+      </tbody>
+    </table>
+  </div>
+</div>
+</body>

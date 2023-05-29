@@ -1,0 +1,46 @@
+<!-- admin-page.component.html -->
+<div class="admin-page">
+  <div class="left-panel">
+    <h2 class="header-text">User Verification</h2>
+    <table>
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Created at</th>
+        <th>Action</th>
+      </tr>
+      </thead>
+      <tbody>
+      <ng-container *ngFor="let user of users">
+        <tr *ngIf="!isUserVerified(user)">
+          <td>{{ user.name }}</td>
+          <td>{{ user.userCreatedAt | date }}</td>
+          <td class="buttons">
+            <button (click)="submitUser(user)">Submit</button>
+            <button (click)="rejectUser(user)">Reject</button>
+          </td>
+        </tr>
+      </ng-container>
+      </tbody>
+    </table>
+  </div>
+  <div class="right-panel">
+    <h2 class="header-text">All Users</h2>
+    <table>
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Created at</th>
+        <th>Count Trips</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let user of users">
+        <td>{{ user.name }}</td>
+        <td>{{ user.userCreatedAt | date }}</td>
+        <td>{{ user.userTrips?.length }}</td>-->
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

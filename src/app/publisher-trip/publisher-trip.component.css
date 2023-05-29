@@ -1,0 +1,84 @@
+body{
+  background-color: #ffffff;
+}
+input{
+  align-items: center;
+  box-sizing: border-box;
+  color:  hsla(189, 89%, 17%, 1);
+  background-color: hsla(0, 0%, 93%, 1);
+  border-radius: 16px;
+  box-shadow: 0 0 0  3px transparent;
+
+  width: 100%;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+.header{
+  text-align: center;
+  font: 200 30px/32px "gt-eesti", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  padding-left: 24px;
+  padding-right: 24px;
+  margin: 10px;
+}
+
+.toolbar {
+  background-color: #fff;
+  height: 50px;
+  border-bottom: 1px solid #ccc;
+}
+
+.container {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.col-md-12 {
+  width: 100%;
+}
+
+.btn {
+  margin-top: 10px;
+}
+
+.btn-primary {
+  background-color: #000;
+  color: #fff;
+  font-weight: bold;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-secondary {
+  background-color: #ccc;
+  color: #000;
+  font-weight: bold;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+p {
+  font-size: 1em;
+}
+
+button {
+  border-radius: 16px 16px 16px 16px;
+  background-color: hsla(197, 100%, 48%, 1);
+  font-weight: bold;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+

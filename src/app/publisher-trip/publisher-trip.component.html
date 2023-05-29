@@ -1,0 +1,36 @@
+<body>
+<form [formGroup]="form" (ngSubmit)="shareTrip()">
+  <div class="container">
+    <div class="col-md-12 text-center">
+      <h2 class="header">Створити поїздку</h2>
+      <input type="text" placeholder="Введіть стартову точку" formControlName="startRoute">
+      <input type="text" placeholder="Введіть пункт призначення" formControlName="endRoute">
+      <input type="date" placeholder="Час відбуття" formControlName="departureAt">
+      <button class="col-md-12 text-center" type="submit">Створити</button>
+    </div>
+  </div>
+</form>
+
+<div class="container" style="margin-top: 25px">
+  <div class="row" style="background-color: rgb(237, 237, 237);">
+    <h2 class="col-md-12 text-center">Поїздки</h2>
+    <div class="col-md-6">
+      <ul style="list-style: none; padding-left: 0;">
+        <li *ngFor="let trip of trips.slice(0, trips.length / 2)" style="margin: 5px">
+          {{ trip.route.startRoute }} -> {{ trip.route.endRoute }}
+          {{ trip.departureAt | date }}
+        </li>
+      </ul>
+    </div>
+    <div class="col-md-6">
+      <ul style="list-style: none; padding-left: 0;">
+        <li *ngFor="let trip of trips.slice(trips.length / 2)" style="margin: 5px">
+          {{ trip.route.startRoute }} -> {{ trip.route.endRoute }}
+          {{ trip.departureAt | date }}
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+</body>
